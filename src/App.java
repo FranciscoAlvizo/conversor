@@ -1,8 +1,9 @@
-import java.math.BigDecimal;
 import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) {
+
+        Moneda mon = new Moneda();
 
         Object[] opcionesDeConversion = { "Conversor de Moneda", "Conversor de Temperatura" };
 
@@ -13,13 +14,16 @@ public class App {
 
         if (opcion == "Conversor de Moneda") {
 
-            Object valor = JOptionPane.showInputDialog(null, "Ingresa la cantidad de dinero que deseas convertir: ",
+            String valor = JOptionPane.showInputDialog(null, "Ingresa la cantidad de dinero que deseas convertir: ",
                     "Valor", JOptionPane.QUESTION_MESSAGE);
 
             while (!EsNumero((String) valor)) {
                 valor = JOptionPane.showInputDialog(null, "Por favor inserte un numero valido ", "Error",
                         JOptionPane.ERROR_MESSAGE);
             }
+
+            mon.elegirmoneda();
+            mon.MxnaDolar(valor);
 
         } else if (opcion == "Conversor de Temperatura") {
             Object valor = JOptionPane.showInputDialog(null, "Ingrese la temperatura que desea convertir", "Valor",
