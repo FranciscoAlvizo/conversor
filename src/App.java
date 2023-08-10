@@ -17,7 +17,7 @@ public class App {
             String valor = JOptionPane.showInputDialog(null, "Ingresa la cantidad de dinero que deseas convertir: ",
                     "Valor", JOptionPane.QUESTION_MESSAGE);
 
-            while (!EsNumero((String) valor)) {
+            while (!EsNumero(valor)) {
                 valor = JOptionPane.showInputDialog(null, "Por favor inserte un numero valido ", "Error",
                         JOptionPane.ERROR_MESSAGE);
             }
@@ -27,7 +27,7 @@ public class App {
         } else if (opcion == "Conversor de Temperatura") {
             String valor = JOptionPane.showInputDialog(null, "Ingrese la temperatura que desea convertir", "Valor",
                     JOptionPane.QUESTION_MESSAGE);
-            while (!EsNumero((String) valor)) {
+            while (!EsNumero(valor)) {
                 valor = JOptionPane.showInputDialog(null, "Por favor inserte un numero valido ", "Error",
                         JOptionPane.ERROR_MESSAGE);
             }
