@@ -2,8 +2,8 @@ import javax.swing.JOptionPane;
 
 public class App {
     public static void main(String[] args) {
-
-        Moneda mon = new Moneda();
+        ElegirMonedaFuncion fun = new ElegirMonedaFuncion();
+        Temperatura tem = new Temperatura();
 
         Object[] opcionesDeConversion = { "Conversor de Moneda", "Conversor de Temperatura" };
 
@@ -22,12 +22,16 @@ public class App {
                         JOptionPane.ERROR_MESSAGE);
             }
 
-            mon.elegirmoneda();
-            mon.MxnaDolar(valor);
+            fun.elegirmoneda(valor);
 
         } else if (opcion == "Conversor de Temperatura") {
-            Object valor = JOptionPane.showInputDialog(null, "Ingrese la temperatura que desea convertir", "Valor",
+            String valor = JOptionPane.showInputDialog(null, "Ingrese la temperatura que desea convertir", "Valor",
                     JOptionPane.QUESTION_MESSAGE);
+            while (!EsNumero((String) valor)) {
+                valor = JOptionPane.showInputDialog(null, "Por favor inserte un numero valido ", "Error",
+                        JOptionPane.ERROR_MESSAGE);
+            }
+            tem.TipoDeGrados(valor);
         }
 
     }

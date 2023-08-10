@@ -1,16 +1,9 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 import javax.swing.JOptionPane;
 
 public class Moneda {
-
-    public void elegirmoneda() {
-
-        Object[] opcionesDeConversion = { "MXN a Dólar", "MXN a Euro", "MXN a Libras Esterlinas", "MXN a Yen Japónes",
-                "MXN a Won sul-coreano", "Dólar a MXN", "Euro a MXN", "Libras Esterlinas a MXN", "Yen Japónes a MXN",
-                "Won sul-coreano a MXN" };
-        Object opcion = JOptionPane.showInputDialog(null, "Elije una moneda a la que deseas convertir tu dinero:  ",
-                "Menu",
-                JOptionPane.PLAIN_MESSAGE, null, opcionesDeConversion, opcionesDeConversion[0]);
-    }
 
     public void MostrarConversion(double res, String string) {
         JOptionPane.showMessageDialog(null, "Tienes $" + res + " " + string, "Resultado",
@@ -20,8 +13,72 @@ public class Moneda {
     public void MxnaDolar(String valor) {
         double d = Double.parseDouble(valor);
         double res = d * 0.059;
-        MostrarConversion(res, "Dólares");
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Dólares");
 
+    }
+
+    public void MxnaEuro(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 0.053;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Euros");
+    }
+
+    public void MxnaLibras(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 0.046;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Libras Esterlinas");
+    }
+
+    public void MxnaYen(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 8.42;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Yen Japónes");
+    }
+
+    public void MxnaWon(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 76.99;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Won sul-coreano");
+    }
+
+    public void DolaraMxn(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 17.06;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Pesos Mexicanos");
+    }
+
+    public void EuroaMxn(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 18.73;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Pesos Mexicanos");
+    }
+
+    public void LibrasaMxn(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 21.71;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Pesos Mexicanos");
+    }
+
+    public void YenaMxn(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 0.12;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Pesos Mexicanos");
+    }
+
+    public void WonaMxn(String valor) {
+        double d = Double.parseDouble(valor);
+        double res = d * 0.013;
+        BigDecimal bigDecimal = new BigDecimal(res).setScale(2, RoundingMode.UP);
+        MostrarConversion(bigDecimal.doubleValue(), "Pesos Mexicanos");
     }
 
 }
