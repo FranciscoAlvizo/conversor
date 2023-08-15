@@ -1,5 +1,11 @@
-<h1 aling="center">Challege conversor de monedas</h1>
+<h1 aling="center">Challege Conversor de Monedas</h1>
 
+<h2>Descripcion del proyecto</h2>
+<p>Este proyecto es un reto del curso de Alura, el cual tiene como objetivo él desarrolla una aplicación que convierta el tipo de moneda, la temperatura, etc.; Usando como lenguaje principal Java, con la ayuda de la librería swing para él desarrolló del mismo.</p>
+
+
+## Acceso al proyecto
+Mas información sobre el proyecto [aqui](https://github.com/FranciscoAlvizo/conversor/tree/main)
 
 
 ## Getting Started
