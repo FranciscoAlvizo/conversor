@@ -5,7 +5,7 @@
 
 
 ## Acceso al proyecto
-Mas información sobre el proyecto [aqui](https://github.com/FranciscoAlvizo/conversor/tree/main)
+Mas información sobre el proyecto click en  [aqui](https://github.com/FranciscoAlvizo/conversor/tree/main)
 
 
 ## Getting Started
